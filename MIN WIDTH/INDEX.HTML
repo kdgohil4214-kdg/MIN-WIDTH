@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop</title>
+
+    <!-- External Icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        /* ---------- Global Styling ---------- */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #3c2a21, #8d6e63);
+            color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* ---------- Container ---------- */
+        .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* ---------- Product Card ---------- */
+        .card {
+            background: #ffffff;
+            color: #333;
+            width: 250px;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            display: inline-block; /* display property */
+            position: relative;
+        }
+
+        /* Discount badge using float */
+        .badge {
+            background: #d32f2f;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            float: left;
+            font-size: 12px;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .card h3 {
+            text-align: center;
+            margin: 10px 0;
+            text-transform: capitalize;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .old {
+            text-decoration: line-through;
+            color: gray;
+            font-size: 14px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background: #3c2a21;
+            color: #fff;
+            border-radius: 8px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Parent-child selector */
+        .card .details p {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* Media Query for responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Coffee Products</h1>
+
+    <div class="container">
+
+        <!-- CARD 1 -->
+        <div class="card premium">
+            <span class="badge">20% OFF</span>
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Coffee" />
+            <h3>Classic Brew</h3>
+            <div class="details">
+                <p>Smooth and bold flavor</p>
+            </div>
+            <div class="price">₹199 <span class="old">₹249</span></div>
+            <a href="#" class="btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <span class="badge">10% OFF</span>
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" alt="Coffee" />
+            <h3>Dark Roast</h3>
+            <div class="details">
+                <p>Rich and intense</p>
+            </div>
+            <div class="price">₹299 <span class="old">₹329</span></div>
+            <a href="#" class="btn"><i class="fas fa-mug-hot"></i> Buy Now</a>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card special">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Coffee" />
+            <h3>Hazelnut Latte</h3>
+            <div class="details">
+                <p>Sweet & creamy</p>
+            </div>
+            <div class="price">₹249</div>
+            <a href="#" class="btn"><i class="fas fa-coffee"></i> Order</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
